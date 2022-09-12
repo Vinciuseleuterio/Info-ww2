@@ -1,0 +1,190 @@
+html {
+    scroll-snap-type: y mandatory;
+}
+
+.navbar {
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.banner {
+    height: 95vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: color;
+    transition: .4s;
+    background-size: cover;
+    background-attachment: fixed;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 95%;
+}
+
+.banner:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.bannerText {
+    width: 980px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.banner1 .bannerText {
+    background-color: black;
+}
+
+.title {
+    font-family: 'Raleway', sans-serif;
+    color: black;
+    font-size: 50px;
+    background: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 25px;
+}
+
+.subtitle {
+    color: white;
+    text-align: justify;
+}
+
+.banner1 .subtitle {
+    text-align: center;
+}
+
+.cardsContainer {
+    width: 980px;
+    height: 1000px;
+    justify-content: center;
+    margin: 0px auto;
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.buttonStart {
+    color: black;
+    background-color: white;
+    margin-top: 20px;
+    padding: 9px;
+}
+
+.btn {
+    margin-top: 15px;
+    height: 50px;
+    width: 200px;
+}
+
+
+/* banners */
+
+.banner1 {
+    background-image: url("https://static.dw.com/image/18002261_605.jpg");
+}
+
+.banner2 {
+    background-image: url("../img/banner2.jpg");
+
+}
+
+.banner3 {
+    background-image: url("../img/banner3.jpg");
+
+}
+
+.banner4 {
+    background-image: url("../img/banner5.jpg");
+
+}
+
+.banner5 {
+    background-image: url("../img/banner6.jpg");
+
+}
+
+
+
+.descerslide {
+    margin-bottom: 10px;
+
+}
+
+.setabranca {
+    width: 60px;
+    height: 60px;
+    -webkit-box-shadow: 0px 0px 25px 4px rgba(181, 181, 181, 0.88);
+    box-shadow: 0px 0px 25px 4px rgba(181, 181, 181, 0.88);
+    border-radius: 50%;
+}
+
+.logopolimig {
+    width: 45px;
+}
+
+.navaligment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textlogo {
+    color: white;
+    margin-left: 5px;
+}
+
+.scrollLevel {
+    color: white;
+    height: 200px;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+
+
+@media (min-height: 30em) {
+    .content>* {
+        opacity: 0;
+        transform: translate3d(0, 4rem, 0);
+        transition: opacity 800ms var(--delay),
+            transform 800ms cubic-bezier(0.13, 0.07, 0.26, 0.99) var(--delay);
+    }
+}
+
+.is-visible .content>* {
+    opacity: 1;
+    transform: translate3d(0, 1rem, 0);
+}
