@@ -69,5 +69,21 @@ function fade() {
 
 }
 
+function navbarHide() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+    } else {
+        document.getElementById("navbar").style.top = "-50px";
+    }
+    prevScrollpos = currentScrollPos;
+}
+
 window.onload = function () { scrollCheck(); fade() };
-window.onscroll = function () { scrollCheck(); fade() };
+window.onscroll = function () {
+    scrollCheck()
+    fade()
+    navbarHide()
+};
+
+var prevScrollpos = window.pageYOffset;

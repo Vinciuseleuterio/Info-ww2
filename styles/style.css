@@ -1,20 +1,43 @@
-html {
-    scroll-snap-type: y mandatory;
-}
+/*Navbar */
 
-.navbar {
-    z-index: 999;
+#navbar {
+    background-color: #333;
     position: fixed;
+    top: 0;
     width: 100%;
+    transition: top 0.3s;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+#navbar h2 {
+    font-size: 25px;
+    margin-left: 8px;
+    color: white;
+    margin-right: 10px;
+}
+
+#navbar img {
+    width: 50px;
+    height: 50px;
 
 }
 
-::-webkit-scrollbar {
-    display: none;
+.ano {
+    float: right;
 }
+
+/* Banners */
 
 .banner {
-    height: 95vh;
+    height: 100vh;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     background-blend-mode: color;
@@ -73,33 +96,6 @@ html {
     text-align: center;
 }
 
-.cardsContainer {
-    width: 980px;
-    height: 1000px;
-    justify-content: center;
-    margin: 0px auto;
-    padding-top: 40px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.buttonStart {
-    color: black;
-    background-color: white;
-    margin-top: 20px;
-    padding: 9px;
-}
-
-.btn {
-    margin-top: 15px;
-    height: 50px;
-    width: 200px;
-}
-
-
-/* banners */
-
 .banner1 {
     background-image: url("https://static.dw.com/image/18002261_605.jpg");
 }
@@ -124,14 +120,14 @@ html {
 
 }
 
+/* Funções suporte */
 
-
-.descerslide {
+.slideDown {
     margin-bottom: 10px;
 
 }
 
-.setabranca {
+.arrowDown {
     width: 60px;
     height: 60px;
     -webkit-box-shadow: 0px 0px 25px 4px rgba(181, 181, 181, 0.88);
@@ -139,14 +135,17 @@ html {
     border-radius: 50%;
 }
 
-.logopolimig {
-    width: 45px;
+.buttonStart {
+    color: black;
+    background-color: white;
+    margin-top: 20px;
+    padding: 9px;
 }
 
-.navaligment {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.btn {
+    margin-top: 15px;
+    height: 50px;
+    width: 200px;
 }
 
 .textlogo {
@@ -187,4 +186,12 @@ a:hover {
 .is-visible .content>* {
     opacity: 1;
     transform: translate3d(0, 1rem, 0);
+}
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
