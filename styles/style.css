@@ -10,6 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 5px;
 }
 
 #navbar a:hover {
@@ -111,11 +112,16 @@
 }
 
 .banner4 {
-    background-image: url("../img/banner5.jpg");
+    background-image: url("../img/banner4.jpg");
 
 }
 
 .banner5 {
+    background-image: url("../img/banner5.png");
+
+}
+
+.banner6 {
     background-image: url("../img/banner6.jpg");
 
 }
