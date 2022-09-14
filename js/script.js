@@ -4,10 +4,11 @@ function scrollCheck() {
     const level4 = document.getElementById("level4")
     const level5 = document.getElementById("level5")
     const level6 = document.getElementById("level6")
+    const level7 = document.getElementById("level7")
 
     var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
     var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    var scrolled = (winScroll / height) * 100;
+    var scrolled = (winScroll / height) * 120;
 
     if (scrolled >= 20) {
         level2.classList.replace("fa-regular", "fa-solid")
@@ -38,6 +39,13 @@ function scrollCheck() {
     } else {
         level6.classList.replace("fa-solid", "fa-regular")
     }
+
+    if (scrolled >= 120) {
+        level7.classList.replace("fa-regular", "fa-solid")
+    } else {
+        level7.classList.replace("fa-solid", "fa-regular")
+    }
+
 
 }
 
