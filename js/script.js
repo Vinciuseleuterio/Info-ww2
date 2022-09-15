@@ -98,7 +98,9 @@ window.onload = function () { scrollCheck(); fade() };
 window.onscroll = function () {
     scrollCheck()
     fade()
-    navbarHide()
+    if (window.innerWidth > 980) {
+        navbarHide()
+    }
 };
 
 var prevScrollpos = window.pageYOffset;
